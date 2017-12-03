@@ -15,6 +15,7 @@ import java.util.List;
  * @author ealbertos
  */
 public class ValidationLists<E> {
+
     private final List<E> valid;
     private final List<E> invalid;
     private final List<E> conflicted;

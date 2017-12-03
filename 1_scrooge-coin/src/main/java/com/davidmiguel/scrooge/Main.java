@@ -80,7 +80,7 @@ public class Main {
                 throw new RuntimeException(e);
             }
             this.addSignature(sig.sign(), input);
-            this.finalizeTx();
+            this.finalize();
         }
     }
 }

@@ -188,7 +188,7 @@ public class Transaction {
         return tx;
     }
 
-    public void finalizeTx() {
+    public void finalize() {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(getRawTx());

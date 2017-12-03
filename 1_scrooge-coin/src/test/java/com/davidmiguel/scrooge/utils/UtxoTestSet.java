@@ -339,7 +339,7 @@ public class UtxoTestSet {
             tx.addOutput(value, addr);
             keyPairAtIndex.put(j, people.get(rIndex));
         }
-        tx.finalizeTx();
+        tx.finalize();
         return tx;
     }
 
@@ -476,7 +476,7 @@ public class UtxoTestSet {
                 }
                 tx.addSignature(sign(privateKey, rawData), j);
             }
-            tx.finalizeTx();
+            tx.finalize();
 
             if (corrupted) {
                 invalid.add(tx);
