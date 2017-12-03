@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class TxHandler {
 
-    private UTXOPool utxoPool;
+    UTXOPool utxoPool;
 
     /**
      * Creates a public ledger whose current UTXOPool (collection of unspent transaction outputs) is

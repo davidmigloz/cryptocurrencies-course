@@ -59,7 +59,7 @@ public class Main {
         tx2.signTx(pk_scrooge.getPrivate(), 0);
 
         /*
-         * Start the test
+         * Start the test TxHandler
          */
         // Remember that the utxoPool contains a single unspent Transaction.Output which is
         // the coin from Scrooge.
@@ -67,6 +67,16 @@ public class Main {
         System.out.println("txHandler.isValidTx(tx2) returns: " + txHandler.isValidTx(tx2));
         System.out.println("txHandler.handleTxs(new Transaction[]{tx2}) returns: " +
                 txHandler.handleTxs(new Transaction[]{tx2}).length + " transaction(s)");
+
+        /*
+         * Start the test MaxFeeTxHandler
+         */
+        // Remember that the utxoPool contains a single unspent Transaction.Output which is
+        // the coin from Scrooge.
+        TxHandler maxFeeTxHandler = new MaxFeeTxHandler(utxoPool);
+        System.out.println("maxFeeTxHandler.isValidTx(tx2) returns: " + maxFeeTxHandler.isValidTx(tx2));
+        System.out.println("maxFeeTxHandler.handleTxs(new Transaction[]{tx2}) returns: " +
+                maxFeeTxHandler.handleTxs(new Transaction[]{tx2}).length + " transaction(s)");
     }
 
     public static class Tx extends Transaction {
